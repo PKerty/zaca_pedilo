@@ -1,5 +1,7 @@
+const PORT = process.env.PORT || 69420;
+
 const server = Bun.serve({
-  port: 42069,
+  port: PORT,
 
   fetch(rq) {
     return new Response(JSON.stringify({ message: "Zaca Pedilo" }) + "\n", {
@@ -9,4 +11,3 @@ const server = Bun.serve({
 });
 
 console.log("Started server on port:", server.url);
-
